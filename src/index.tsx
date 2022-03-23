@@ -9,7 +9,7 @@ import './index.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/react_lc'>
       <Provider store={store}>
         <App />
       </Provider>
