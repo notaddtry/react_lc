@@ -1,16 +1,17 @@
-import React, { FC, MouseEventHandler } from 'react'
-
+import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { removeContact } from '../../store/slices/contactsSlice'
+
 import { useAppSelector, useAppDispatch } from '../hooks/redux-hooks'
-import { IContactAction } from '../types/contactType'
+
+import { removeContact } from '../../store/slices/contactsSlice'
+import { IContact } from '../types/contactType'
 import AddContact from './AddContact'
 
 const ContactsList: FC = () => {
   const contacts = useAppSelector((state) => state.contacts)
   const dispatch = useAppDispatch()
 
-  const deleteContact = (contact: IContactAction) => {
+  const deleteContact = (contact: IContact) => {
     dispatch(removeContact(contact))
   }
 

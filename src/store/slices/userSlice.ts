@@ -11,12 +11,12 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    logInUser(state: IUser, action: PayloadAction<IUser>) {
+    logInUser(state, action: PayloadAction<IUser>) {
       state.email = action.payload.email
       state.id = action.payload.id
       state.token = action.payload.token
     },
-    logOutUser(state: IUser) {
+    logOutUser(state) {
       state.email = null
       state.id = null
       state.token = null

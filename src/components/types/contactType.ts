@@ -1,4 +1,4 @@
-export interface IContactAction {
+export interface IContact {
   id: string
   name: string
 }

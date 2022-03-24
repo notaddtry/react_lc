@@ -1,9 +1,11 @@
-import React from 'react'
-import { addContact } from '../../store/slices/contactsSlice'
+import React, { FC } from 'react'
+
 import { useAppDispatch } from '../hooks/redux-hooks'
+
+import { addContact } from '../../store/slices/contactsSlice'
 import { ContactForm } from './ContactForm'
 
-const AddContact = () => {
+const AddContact: FC = () => {
   const dispatch = useAppDispatch()
 
   const handleSubmit = (title: string | undefined) => {

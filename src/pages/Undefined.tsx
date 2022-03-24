@@ -2,9 +2,9 @@ import React from 'react'
 
 const Undefined = () => {
   return (
-    <div>
-      <span>Do not found this page</span>
-    </div>
+    <>
+      <h1>Do not found this page</h1>
+    </>
   )
 }
 

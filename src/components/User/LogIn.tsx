@@ -33,7 +33,7 @@ const LogIn: FC = () => {
     <>
       <InputForm title={title} onSubmit={handleSubmit} />
       <span>
-        Do not have account? <Link to='/register'>Sign Up!</Link>{' '}
+        Do not have account? <Link to='/register'>Sign Up!</Link>
       </span>
     </>
   )

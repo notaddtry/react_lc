@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { useNavigate, useParams } from 'react-router'
-import { editContact } from '../../store/slices/contactsSlice'
+
 import { useAppDispatch, useAppSelector } from '../hooks/redux-hooks'
+
+import { editContact } from '../../store/slices/contactsSlice'
 import { ContactForm } from './ContactForm'
 
-const EditContact = () => {
+const EditContact: FC = () => {
   const { id } = useParams()
   const dispatch = useAppDispatch()
   const navigate = useNavigate()

@@ -1,6 +1,4 @@
 import React, { FC, useState } from 'react'
-import { useNavigate, useParams } from 'react-router'
-import { useAppSelector } from '../hooks/redux-hooks'
 
 interface FormProps {
   title?: string | undefined
@@ -8,7 +6,6 @@ interface FormProps {
 }
 
 export const ContactForm: FC<FormProps> = (props) => {
-  const navigate = useNavigate()
   const [title, setTitle] = useState(props.title || '')
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -26,9 +23,9 @@ export const ContactForm: FC<FormProps> = (props) => {
 
   return (
     <div className='row'>
-      <form className='col s12'>
-        <div className='row'>
-          <div className='input-field col s6'>
+      <form className='col addContact-wrapper'>
+        <div className='row addContact-input-wrapper'>
+          <div className='input-field'>
             <input
               placeholder='Enter name'
               id='first_name'
@@ -38,8 +35,13 @@ export const ContactForm: FC<FormProps> = (props) => {
               onChange={(e) => handleChange(e)}
             />
           </div>
+          <button
+            className='btn waves-effect waves-light'
+            onClick={(e) => handleSubmit(e, title)}>
+            <i className='material-icons right'>send</i>
+            Add Contact
+          </button>
         </div>
-        <button onClick={(e) => handleSubmit(e, title)}>Submit</button>
       </form>
     </div>
   )

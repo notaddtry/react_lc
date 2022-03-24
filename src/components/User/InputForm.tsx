@@ -53,7 +53,11 @@ const InputForm: FC<FormProps> = ({ title, onSubmit }) => {
             />
           </div>
         </div>
-        <button onClick={(e) => handleSubmit(e, email, password)}>
+
+        <button
+          className='btn waves-effect waves-light'
+          onClick={(e) => handleSubmit(e, email, password)}>
+          <i className='material-icons right'>send</i>
           Submit
         </button>
       </form>

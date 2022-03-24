@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
 import InputForm from './InputForm'
 
@@ -6,7 +6,7 @@ import { logInUser } from '../../store/slices/userSlice'
 import { useAppDispatch } from '../hooks/redux-hooks'
 import { Link, useNavigate } from 'react-router-dom'
 
-const Register = () => {
+const Register: FC = () => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
   const title = 'Register'
@@ -33,7 +33,7 @@ const Register = () => {
     <>
       <InputForm title={title} onSubmit={handleSubmit} />
       <span>
-        Already have an account? <Link to='/login'>Sign In!</Link>{' '}
+        Already have an account? <Link to='/login'>Sign In!</Link>
       </span>
     </>
   )

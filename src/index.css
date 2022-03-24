@@ -11,7 +11,7 @@ body {
 }
 button {
   border: none;
-  background-color: #fff;
+  background-color: unset;
 }
 
 code {
@@ -24,16 +24,20 @@ code {
   flex-direction: column;
   height: 100vh;
 }
+.homepage-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-wrapper > .btn {
+  margin: 0px 0px 2rem 0px;
+}
 
 .container {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
   flex: 1 1 auto;
-}
-.bottom-secondary-content {
-  top: unset !important;
-  bottom: 16px;
 }
 
 .title {
@@ -61,4 +65,37 @@ code {
 
 .delete {
   cursor: pointer;
+}
+
+.btn-single-page {
+  margin: 0.5rem 0px 0px 0px;
+}
+.contact-single-page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addContact-wrapper {
+  width: 100%;
+}
+.addContact-input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn_nav {
+  color: #fff;
+  cursor: pointer;
+}
+.btn_nav-wrapper {
+  cursor: pointer;
+}
+.btn_nav-wrapper:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn_nav:focus {
+  background: unset;
 }
