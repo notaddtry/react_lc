@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_lc=self.webpackChunkreact_lc||[]).push([[846],{846:function(e,c,n){n.r(c);n(791);var t=n(504),a=n(20),r=n(535),s=n(184);c.default=function(){var e=(0,a.T)();return(0,s.jsxs)("div",{className:"homepage-wrapper",children:[(0,s.jsx)("h1",{children:"Home page"}),(0,s.jsxs)(t.rU,{to:"/contacts",className:"btn",children:[" ","See contacts"]}),(0,s.jsx)("button",{className:"btn",onClick:function(c){return function(c){c.preventDefault(),e((0,r.ne)())}(c)},children:"Log Out from account"})]})}}}]);
+//# sourceMappingURL=846.bb510485.chunk.js.map
