@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import ContactsPage from './pages/ContactsPage'
-import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import Undefined from './pages/Undefined'
 import ContactSinglePage from './pages/ContactSinglePage'
@@ -14,6 +13,8 @@ import ContactsLayout from './components/layout/ContactsLayout'
 
 import RequireAuth from './components/hoc/RequireAuth'
 
+const HomePage = React.lazy(() => import('./pages/HomePage'))
+
 function App() {
   return (
     <div className='App wrapper'>
@@ -23,7 +24,9 @@ function App() {
             index
             element={
               <RequireAuth>
-                <HomePage />
+                <Suspense fallback={<p>loading...</p>}>
+                  <HomePage />
+                </Suspense>
               </RequireAuth>
             }
           />
